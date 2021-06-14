@@ -73,11 +73,11 @@ namespace Hackathon
                 stopRecognition.TrySetResult(0);
             };
 
-            await recognizer.StartContinuousRecognitionAsync().ConfigureAwait(false);
+            await recognizer.StartContinuousRecognitionAsync();
 
             Task.WaitAny(stopRecognition.Task);
 
-            await recognizer.StopContinuousRecognitionAsync().ConfigureAwait(false);
+            await recognizer.StopContinuousRecognitionAsync();
         }
     }
 }
